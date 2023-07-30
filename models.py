@@ -36,4 +36,4 @@ class BeastAbility(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     beast_id = db.Column(db.Integer, db.ForeignKey('beasts.id'))
-    magical_ability_id = db.Column(db.Integer,db.ForeignKey('abilities.id'))
+    magical_ability_id = db.Column(db.Integer,db.ForeignKey('magical_abilities.id'))
