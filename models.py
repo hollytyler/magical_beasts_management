@@ -17,8 +17,8 @@ class Beast(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64))
     dob = db.Column(db.DateTime())
-    breed = db.Column(db.String(64))
-    origin_country = db.Column(db.String(64))
+    species = db.Column(db.String(64))
+    place_of_origin = db.Column(db.String(64))
     keeper_id = db.Column(db.Integer, db.ForeignKey('keepers.id'))
     beast_abilities = db.relationship('BeastAbility', backref='beast')
 
