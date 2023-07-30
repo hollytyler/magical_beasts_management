@@ -5,15 +5,13 @@ from flask_migrate import Migrate
 
 app = Flask(__name__)
 
-
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql://holly@localhost:5432/magical_beasts"
-
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 from controllers.beast_controller import beasts_blueprint
 from controllers.keeper_controller import keepers_blueprint
-from models import *
+from models import Keeper, Beast, MagicalAbility, BeastAbility
 
 app.register_blueprint(beasts_blueprint)
 app.register_blueprint(keepers_blueprint)
