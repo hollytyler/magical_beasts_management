@@ -11,7 +11,7 @@ migrate = Migrate(app, db)
 
 from controllers.beast_controller import beasts_blueprint
 from controllers.keeper_controller import keepers_blueprint
-from models import Keeper, Beast, MagicalAbility, BeastAbility
+from models import Keeper, Beast, MagicalAilment, Treatment
 
 app.register_blueprint(beasts_blueprint)
 app.register_blueprint(keepers_blueprint)

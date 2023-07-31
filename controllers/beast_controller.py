@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, request
 from flask import Blueprint
-from models import Keeper, Beast, MagicalAbility, BeastAbility
+from models import Keeper, Beast, MagicalAilment, Treatment
 from app import db
 
 beasts_blueprint = Blueprint("beasts", __name__)

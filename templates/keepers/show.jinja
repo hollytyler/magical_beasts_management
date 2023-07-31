@@ -3,14 +3,12 @@
 {% block content %}
 <h1>{{ keeper.name }}</h1>
   
-  <p>Hold: {{ keeper.name_of_hold }}</p>
+  <h2>Hold: {{ keeper.name_of_hold }}</h2>
 
-  <h2>Beasts:</h2>
-
-  <ul>
-    {% for beast in beasts %}
-    <li>{{ beast.name }}</li>  
+  <h1>Beasts:</h1>
+  <p>
+    {% for beast in keeper.beasts %}
+      <p>{{ beast.name }}</p>
     {% endfor %}
-  </ul>
-
+  </p>
 {% endblock content %}

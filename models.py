@@ -9,7 +9,7 @@ class Keeper(db.Model):
     beasts = db.relationship('Beast', backref='keeper')
 
     def __repr__(self):
-        return f"<Keeper: {self.name}: {self.name_of_hold}"
+        return f"Keeper {self.id}: {self.name}"
 
 class Beast(db.Model):
     __tablename__ = "beasts"
@@ -18,22 +18,25 @@ class Beast(db.Model):
     name = db.Column(db.String(64))
     dob = db.Column(db.DateTime())
     species = db.Column(db.String(64))
-    place_of_origin = db.Column(db.String(64))
+    native_to = db.Column(db.String(64))
     keeper_id = db.Column(db.Integer, db.ForeignKey('keepers.id'))
-    beast_abilities = db.relationship('BeastAbility', backref='beast')
+    treatments = db.relationship('Treatment', backref='beast')
+
+    def __repr__(self):
+        return f"Beast {self.id}: {self.name}"
 
 
-class MagicalAbility(db.Model):
-    __tablename__ = "magical_abilities"
+class MagicalAilment(db.Model):
+    __tablename__ = "magical_ailments"
 
     id = db.Column(db.Integer, primary_key=True)
     ability = db.Column(db.String(64))
     description = db.Column(db.Text())
-    beast_abilities = db.relationship('BeastAbility', backref='magical_ability')
+    treatments = db.relationship('Treatment', backref='magical_ailments')
 
-class BeastAbility(db.Model):
-    __tablename__ = "beast_abilities"
+class Treatment(db.Model):
+    __tablename__ = "treatments"
 
     id = db.Column(db.Integer, primary_key=True)
     beast_id = db.Column(db.Integer, db.ForeignKey('beasts.id'))
-    magical_ability_id = db.Column(db.Integer,db.ForeignKey('magical_abilities.id'))
+    magical_ailment_id = db.Column(db.Integer,db.ForeignKey('magical_ailments.id'))
