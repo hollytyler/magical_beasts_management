@@ -2,6 +2,12 @@
 
 {% block content %}
   <h1>Beasts:</h1>
-
+{% for beast in beasts %}
+  <h1>{{ beast.name }}</h1>
+  <h2>Date of Birth: {{ beast.dob }}</h2>
+  <h2>Species: {{ beast.species }}</h2>
+  <h2>Native to: {{ beast.native_to }}</h2>
+  <h2>Keeper: {{ beast.keeper_id.name }} Hold: {{ beast.keeper_id.name_of_hold }}</h2>
+{% endfor %}
 
 {% endblock content %}

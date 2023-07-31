@@ -17,9 +17,8 @@ def show_keepers(id):
     return render_template("keepers/show.jinja", keeper=keeper, beasts=beasts)
 
 @keepers_blueprint.route("/keepers/<id>/add_beast", methods=['POST'])
-def add_beast_to_keeper():
+def add_beast():
     beast_id = request.form("beast_id")
-    new_beast = Beast(beast_id = beast_id)
-    db.session.add(new_beast)
-    db.session.commit
-    return redirect("keeper/<id>")
+    Beast.query.filter_by(beast_id = beast_id).add()
+    db.session.commit()
+    return redirect('/keepers/<id>')

@@ -1,0 +1,21 @@
+td, th {
+  text-align: center;
+}
+
+td {
+  padding: 10px 20px 0px 0px;
+}
+
+.headers {
+  display: flex;
+  align-items: center;
+}
+
+th {
+  border-bottom: 1px solid papayawhip;
+}
+
+
+table {
+  border-collapse: collapse;
+}

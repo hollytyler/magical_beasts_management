@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Magical Beasts and Where We Mend Them</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='tables.css') }}">
 </head>
+
 <body>
-  
+  <main>
     <nav>
       <ul>
         <li>
@@ -20,11 +23,11 @@
         </li>
       </ul>
     </nav>
-<main>
-
-{% block content %}
+    <section id="content">
+      {% block content %}
   
-{% endblock content %}
-</main>
+      {% endblock content %}
+    </section>
+  </main>
 </body>
 </html>
