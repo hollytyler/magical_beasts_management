@@ -16,7 +16,7 @@ from models import Keeper, Beast, MagicalAbility, BeastAbility
 app.register_blueprint(beasts_blueprint)
 app.register_blueprint(keepers_blueprint)
 
-@app.route("/")
+@app.route("/hello")
 def home():
     return render_template("index.jinja")
 
