@@ -5,8 +5,7 @@ from app import db
 
 keepers_blueprint = Blueprint("keepers", __name__)
 
-# # Example of showing an individual object
-# @example_blueprint.route("/example/<id>")
-# def example_show(id):
-#     example_obj = Example.query.get(id)
-#     return render_template("example/show.html", example=example_obj)
+@keepers_blueprint.route("/keepers")
+def keepers():
+    keepers = Keeper.query.all()
+    return render_template("keepers/index.jinja", keepers=keepers)

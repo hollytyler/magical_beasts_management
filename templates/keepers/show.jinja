@@ -1,0 +1,16 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+<h1>{{ keeper.name }}</h1>
+  
+  <p>Hold: {{ keeper.name_of_hold }}</p>
+
+  <h2>Beasts:</h2>
+
+  <ul>
+    {% for beast in beasts %}
+    <li>{{ beast.name }}</li>  
+    {% endfor %}
+  </ul>
+
+{% endblock content %}

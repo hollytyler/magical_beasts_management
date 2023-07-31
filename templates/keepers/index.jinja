@@ -1,0 +1,19 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+  <h1>Keepers</h1>
+
+  <table>
+    <tr>
+    <th>Name</th>
+    <th>Name of Hold</th>
+    </tr>
+    {% for keeper in keepers %}
+    <tr>
+      <td><a href="keepers/{{ keeper.id }}"> {{ keeper.name }}</a></td>
+      <td>|</td>
+      <td>{{ keeper.name_of_hold }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock content %}
