@@ -16,7 +16,7 @@ class Beast(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64))
-    dob = db.Column(db.DateTime())
+    dob = db.Column(db.String(64))
     species = db.Column(db.String(64))
     native_to = db.Column(db.String(64))
     keeper_id = db.Column(db.Integer, db.ForeignKey('keepers.id'))
@@ -30,8 +30,7 @@ class MagicalAilment(db.Model):
     __tablename__ = "magical_ailments"
 
     id = db.Column(db.Integer, primary_key=True)
-    ability = db.Column(db.String(64))
-    description = db.Column(db.Text())
+    treatment_type= db.Column(db.String(64))
     treatments = db.relationship('Treatment', backref='magical_ailments')
 
 class Treatment(db.Model):

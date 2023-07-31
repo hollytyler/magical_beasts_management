@@ -5,8 +5,8 @@ from app import db
 
 beasts_blueprint = Blueprint("beasts", __name__)
 
-# Example of showing an individual object
-# @example_blueprint.route("/example/<id>")
-# def example_show(id):
-#     example_obj = Example.query.get(id)
-#     return render_template("example/show.html", example=example_obj)
+
+@beasts_blueprint.route("/beasts")
+def beasts():
+    beasts = Beast.query.all()
+    return render_template("beasts/index.jinja", beasts=beasts)
