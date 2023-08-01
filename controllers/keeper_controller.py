@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, request
 from flask import Blueprint
-from models import Keeper, Beast, MagicalAilment, Treatment
+from models import Keeper, Beast
 from app import db
 
 keepers_blueprint = Blueprint("keepers", __name__)
@@ -16,9 +16,11 @@ def show_keepers(id):
     beasts = Beast.query.all()
     return render_template("keepers/show.jinja", keeper=keeper, beasts=beasts)
 
-@keepers_blueprint.route("/keepers/<id>/add_beast", methods=['POST'])
-def add_beast():
-    beast_id = request.form("beast_id")
-    Beast.query.filter_by(beast_id = beast_id).add()
-    db.session.commit()
+@keepers_blueprint.route("/keepers/<id>/add", methods=['POST'])
+def add(id):
+    beast_id = request.form("beasts")
+    Beast.query.get(id) # get the beast by id
+    beast = Beast(keeper_id=beast_id)
+    # set its keeper_id to id
+    db.session.commit(beast) # commit
     return redirect('/keepers/<id>')

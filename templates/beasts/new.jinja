@@ -1,0 +1,60 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+  
+  <form action="/beasts/new" method="post">
+
+    <div>
+      <label for="name">Name:</label>
+      <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          autofocus 
+      />
+    </div>
+
+    <div>
+    <label for="dob">Date of Birth:</label>
+    <input 
+        type="text" 
+        id="dob" 
+        name="dob" 
+        required
+    />
+    </div>
+
+    <div>
+    <label for="Species">Species:</label>
+    <input
+        type="text"
+        id="species"
+        name="species"
+    />
+    </div>
+
+    <div>
+    <label for="Ailment">Ailment:</label>
+    <input
+        typer="text"
+        id="ailment"
+        name="ailment"
+    />
+    </div>
+
+    <div>
+    <label for="keeper">Keeper:</label>
+      <select name="keeper_id" id="keeper_id">
+
+          {% for keeper in keepers %}
+              <option value="{{ keeper.id }}">{{ keeper.name }}</option>
+          {% endfor %}
+          
+      </select>
+    </div>
+    <button type="submit">Add Beast</button>
+
+  </form>
+
+{% endblock %}

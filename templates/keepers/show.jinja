@@ -1,21 +1,22 @@
 {% extends 'base.jinja' %}
 
 {% block content %}
-<h1>{{ keeper.name }}</h1>
+
+  <h1>{{ keeper.name }}</h1>
   
   <h2>Hold: {{ keeper.name_of_hold }}</h2>
 
   <h1>Beasts:</h1>
   
-  <form action="keepers/{{ keeper.id }}/add_beast" methods="POST">
-  <input type="submit" value="add"/>
+  <form action="/keepers/{{ keeper.id }}/add" methods="POST">
+    <input type="submit" value="add"/>
     <label for="beast">Select a Beast:</label>
-    <select name="beast_id" id="beast">
-    {% for beast in beasts %}
-      <option value="{{beast.id}}"> {{ beast.name }}</option>
-    {% endfor %}
-    </select>
-    </form>
+      <select name="beast" id="beast">
+        {% for beast in beasts %}
+          <option value="{{beast.id}}"> {{ beast.name }}</option>
+        {% endfor %}
+      </select>
+  </form>
 
     {% for beast in keeper.beasts %}
     <ul>
@@ -27,5 +28,5 @@
       </li>
     </ul>
     {% endfor %}
-  </p>
+
 {% endblock content %}
