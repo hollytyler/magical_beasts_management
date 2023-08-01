@@ -21,7 +21,6 @@ def add_beasts():
     keepers = Keeper.query.all()
     return render_template("beasts/new.jinja", keepers=keepers)
 
-
 @beasts_blueprint.route("/beasts/new", methods=["POST"])
 def create_beast():
     name = request.form['name']
