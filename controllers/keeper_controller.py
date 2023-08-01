@@ -18,9 +18,8 @@ def show_keepers(id):
 
 @keepers_blueprint.route("/keepers/<id>/add", methods=['POST'])
 def add(id):
-    beast_id = request.form("beasts")
-    Beast.query.get(id) # get the beast by id
-    beast = Beast(keeper_id=beast_id)
-    # set its keeper_id to id
-    db.session.commit(beast) # commit
-    return redirect('/keepers/<id>')
+    beast_id = request.form["beast"]
+    beast = Beast.query.get(beast_id)
+    beast.keeper_id = id
+    db.session.commit() 
+    return redirect(f'/keepers/{id}')

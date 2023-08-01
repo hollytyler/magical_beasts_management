@@ -14,8 +14,8 @@ def beasts():
 
 @beasts_blueprint.route("/beasts/new")
 def add_beasts():
-    beasts = Beast.query.all()
-    return render_template("beasts/new.jinja", beasts=beasts)
+    keepers = Keeper.query.all()
+    return render_template("beasts/new.jinja", keepers=keepers)
 
 
 @beasts_blueprint.route("/beasts/new", methods=["POST"])
@@ -25,7 +25,7 @@ def create_beast():
     species = request.form['species']
     ailment = request.form['ailment']
     keeper_id = request.form['keeper']
-    beast = Beast(name=name, dob=dob, species=species, ailment=ailment, keeper=keeper_id)
+    beast = Beast(name=name, dob=dob, species=species, ailment=ailment, keeper_id=keeper_id)
     db.session.add(beast)
     db.session.commit()
     return redirect("/beasts")
