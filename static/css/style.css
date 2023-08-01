@@ -1,5 +1,4 @@
 body {
-  
   margin: 0;
   padding: 20px;
   background-color: rgb(221, 198, 106);
@@ -9,14 +8,15 @@ body {
     display: flex;
     justify-content: center;
     font-size: 36px;
-    font-family: 'Edu SA Beginner', cursive;
+    font-family: 'Apple Chancery', cursive;
   }
 
   nav {
+  margin: 4px;
   padding: 4px;
   background-color: rgb(56, 137, 146);
   color:rgb(107, 52, 16);
-  font-family: 'Edu SA Beginner', cursive;
+  font-family: 'Apple Chancery', cursive;
   font-style: bold;
   font-size: 16px;
 }
@@ -34,3 +34,12 @@ body {
     margin: 0;
     padding: 100px;
 }
+
+.beast-content {
+  list-style-type: none;
+  
+}
+
+  h1, h2, h3, h4, h5 {
+
+  }

@@ -2,11 +2,9 @@
 
 {% block content %}
 
-  <h1>{{ keeper.name }}</h1>
+  <h1>{{ keeper.name }}'s {{ keeper.name_of_hold }}</h1>
   
-  <h2>Hold: {{ keeper.name_of_hold }}</h2>
-
-  <h1>Beasts:</h1>
+  <h1>Beasts</h1>
   
   <form action="/keepers/{{ keeper.id }}/add" method="POST">
     <input type="submit" value="add"/>
@@ -22,9 +20,9 @@
     <ul>
       <li>
       <h2>{{ beast.name }}</h2>
-      <h3>{{ beast.dob }}</h3>
-      <h3>{{ beast.species }}</h3>
-      <h3>{{ beast.native_to }}</h3>
+      <h3>Date of Birth: {{ beast.dob }}</h3>
+      <h3>Species: {{ beast.species }}</h3>
+      <h3>Ailment: {{ beast.ailment }}</h3>
       </li>
     </ul>
     {% endfor %}

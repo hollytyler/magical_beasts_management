@@ -29,3 +29,9 @@ def create_beast():
     db.session.add(beast)
     db.session.commit()
     return redirect("/beasts")
+
+@beasts_blueprint.route("/beasts/<id>/delete", methods=['POST'])
+def delete_beast(id):
+    Beast.query.filter_by(id=id).delete()
+    db.session.commit()
+    return redirect("/beasts")
