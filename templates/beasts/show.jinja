@@ -1,0 +1,11 @@
+  {% extends 'base.jinja' %}
+
+  {% block content %}
+
+  <h1>{{ beast.name }}</h1>
+  <h2>Date of Birth: {{ beast.dob }}</h2>
+  <h2>Species: {{ beast.species }}</h2>
+
+  <h2>Little {{ beast.name }} is currently being treated for: {{ beast.ailment }}</h2>
+
+  {% endblock content %}

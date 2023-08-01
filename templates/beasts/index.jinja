@@ -4,10 +4,7 @@
   <div class="beast-content">
   <h1>Our Beasts and Where They Reside</h1>
 {% for beast in beasts %}
-  <h1>{{ beast.name }}</h1>
-  <h2>Date of Birth: {{ beast.dob }}</h2>
-  <h2>Species: {{ beast.species }}</h2>
-  <h2>Ailment: {{ beast.ailment }}</h2>
+  <a href="beasts/{{ beast.id }}"><h1>{{ beast.name }}</h1></a>
   <h2>Keeper: {{ beast.keeper.name }} Hold: {{ beast.keeper.name_of_hold }}</h2>
   </div>
 

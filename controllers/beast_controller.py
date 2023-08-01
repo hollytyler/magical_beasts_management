@@ -11,6 +11,10 @@ def beasts():
     beasts = Beast.query.all()
     return render_template("beasts/index.jinja", beasts=beasts)
 
+@beasts_blueprint.route("/beasts/<id>")
+def show_beast(id):
+    beast = Beast.query.get(id)
+    return render_template("beasts/show.jinja", beast=beast)
 
 @beasts_blueprint.route("/beasts/new")
 def add_beasts():

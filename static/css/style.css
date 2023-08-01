@@ -1,9 +1,16 @@
 body {
+  background: url('static/image/niffler_under_willow.jpg');
   margin: 0;
   padding: 20px;
   background-color: rgb(221, 198, 106);
   color: rgb(107, 52, 16);
 }
+  .nav-items {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+  }
+
   h1 {
     display: flex;
     justify-content: center;
@@ -19,9 +26,13 @@ body {
   font-family: 'Apple Chancery', cursive;
   font-style: bold;
   font-size: 16px;
+  
 }
 
   nav a {
+    /* display: flex;
+    justify-content: space-around;
+    flex-direction: row; */
     text-decoration: none;
     color:rgb(107, 52, 16);
 }
@@ -33,12 +44,17 @@ body {
   #content {
     margin: 0;
     padding: 100px;
+    list-style-type: none;
 }
 
 .beast-content {
   list-style-type: none;
-  
 }
+    
+    ul {
+      list-style-type: none;
+      font-family: cursive;
+    }
 
   h1, h2, h3, h4, h5 {
 
