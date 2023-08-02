@@ -2,12 +2,11 @@
 
 {% block content %}
   <h1>Our Keepers</h1>
-
+  <img class="home-image" src="/static/images/keeper_with_beasts.jpg">
   <table class="table">
     <tr class="headers"> </tr>
     {% for keeper in keeper %}
       <td><a href="keepers/{{ keeper.id }}"> {{ keeper.name }}</a></td>
-    </tr>
     {% endfor %}
   </table>
 {% endblock content %}

@@ -26,16 +26,16 @@
       <h3>Treatment: {{ beast.treatment }}</h3>
       </li>
     </ul>
-    <div class="delete-keeper-beast">
-    <form 
-    class="delete-form"
-    action="beasts/{{ beast.id }}/delete"
-    method="POST">
-    
-      <input class="delete-button" type="submit" value="delete" />
 
-    </form>
-  </div>
+    <div class="delete-keeper-beast">
+      <form 
+        class="delete-form"
+        action="/keepers/{{ keeper.id }}/beasts/{{ beast.id }}/delete"
+        method="POST">
+        <input class="delete-button" type="submit" value="delete" />
+
+      </form>
+    </div>
     <hr>
     {% endfor %}
 

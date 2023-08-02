@@ -4,49 +4,65 @@ body {
   background-color: rgb(221, 198, 106);
   color: rgb(107, 52, 16);
 }
+
   .nav-items {
+    padding: 0px;
     display: flex;
     flex-direction: row;
-    justify-items: space-between;
+    justify-content: center;
+    justify-content: space-evenly;
   }
 
   h1 {
+    font-size: 36px;
+    font-family: 'Apple Chancery', cursive;
+  }
+
+  h2 {
     display: flex;
-    justify-content: center;
+    align-self: center;
+    align-items: flex-start;
     font-size: 36px;
     font-family: 'Apple Chancery', cursive;
   }
 
   nav {
   margin: 4px;
-  padding: 4px;
   background-color: rgb(56, 137, 146);
   color:rgb(107, 52, 16);
   font-family: 'Apple Chancery', cursive;
   font-style: bold;
   font-size: 16px;
-  
+  border-style: groove;
+  border-width: 4px;
+  border-color: rgb(107, 52, 16);
 }
 
   nav a {
     /* display: flex;
     justify-content: space-around;
     flex-direction: row; */
+    font-size: larger;
+    font-weight: bolder;
     text-decoration: none;
     color:rgb(107, 52, 16);
 }
 
-  nav li {
-    list-style-type: none;
-}
-
   #content {
     margin: 0;
-    padding: 100px;
+    padding: 20px;
     list-style-type: none;
+    display: flex;
+    justify-content: center;
 }
 
+  .home-image {
+    display: flex;
+    
+  }
+
 .beast-content {
+  color: rgb(107, 52, 16);
   list-style-type: none;
 }
     
@@ -55,6 +71,6 @@ body {
       font-family: cursive;
     }
 
-  h1, h2, h3, h4, h5 {
+  /* h1, h2, h3, h4, h5 {
 
-  }
+  } */
