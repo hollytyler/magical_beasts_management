@@ -1,0 +1,51 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+  
+<h1> Edit {{ beast.name }}</h1>
+
+
+<form action="/beasts/{{ beast.id }}" method="post">
+  <h2>Date of Birth: {{ beast.dob }}</h2>
+  <h2>Species: {{ beast.species }}</h2>
+
+  <div>
+      <label for="ailment">Ailment:</label>
+      <input
+        type="text"
+        id="ailment"
+        name="ailment"
+        value="{{ beast.ailment }}"
+        autofocus
+      />
+  </div>
+
+  <div>
+      <label for="treatment">Treatment Plan:</label>
+      <input 
+        type="text"
+        id="treatment"
+        name="treatment"
+        value="{{ beast.treatment }}"
+      />
+  </div>
+
+  <div>
+    <label for="keeper_id">Keeper:</label>
+      <select name="keeper_id">
+        
+        {% for keeper in keeper %}
+          <option 
+          {% if beast.keeper.name == keeper.id %}
+            selected
+          {% endif %}
+          value="{{ keeper.id }}">{{ keeper.name }}</option>
+        {% endfor %}
+
+      </select>
+  </div>
+  <button type="submit">Update Beast</button>
+
+</form>
+
+{% endblock content %}

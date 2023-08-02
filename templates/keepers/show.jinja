@@ -23,8 +23,19 @@
       <h3>Date of Birth: {{ beast.dob }}</h3>
       <h3>Species: {{ beast.species }}</h3>
       <h3>Ailment: {{ beast.ailment }}</h3>
+      <h3>Treatment: {{ beast.treatment }}</h3>
       </li>
     </ul>
+    <div class="delete-keeper-beast">
+    <form 
+    class="delete-form"
+    action="beasts/{{ beast.id }}/delete"
+    method="POST">
+    
+      <input class="delete-button" type="submit" value="delete" />
+
+    </form>
+  </div>
     <hr>
     {% endfor %}
 

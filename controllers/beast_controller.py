@@ -38,3 +38,21 @@ def delete_beast(id):
     Beast.query.filter_by(id=id).delete()
     db.session.commit()
     return redirect("/beasts")
+
+@beasts_blueprint.route("/beasts/<id>/edit")
+def edit_beast(id):
+    keepers = Keeper.query.all()
+    beast = Beast.query.get(id)
+    return render_template("beasts/edit.jinja", keeper=keepers, beast=beast)
+
+@beasts_blueprint.route('/beasts/<id>', methods=['POST'])
+def update_beast(id):
+    ailment = request.form['ailment']
+    treatment = request.form['treatment']
+    keeper_id = request.form['keeper_id']
+    beast = Beast.query.get(id)
+    beast.ailment = ailment
+    beast.keeper_id = keeper_id
+    beast.treatment = treatment
+    db.session.commit()
+    return redirect(f"/beasts/{id}")

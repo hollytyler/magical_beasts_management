@@ -19,6 +19,7 @@ class Beast(db.Model):
     dob = db.Column(db.String(64))
     species = db.Column(db.String(64))
     ailment = db.Column(db.String(64))
+    treatment = db.Column(db.String(64))
     keeper_id = db.Column(db.Integer, db.ForeignKey('keepers.id'))
 
     def __repr__(self):

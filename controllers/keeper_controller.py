@@ -23,3 +23,11 @@ def add(id):
     beast.keeper_id = id
     db.session.commit() 
     return redirect(f'/keepers/{id}')
+
+
+
+@keepers_blueprint.route("/keepers/<id>/delete", methods=['POST'])
+def delete_beast_from_keeper(id):
+    Beast.query.filter_by(id=id).delete()
+    db.session.commit()
+    return redirect(f"/keepers/{id}")
