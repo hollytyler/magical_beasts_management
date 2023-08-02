@@ -17,6 +17,12 @@ h2 {
 
 p {
   margin-top: 0;
+  font-size: 20px;
+}
+
+span {
+  font-weight: normal;
+  font-size: 30px;
 }
 
 .home {
@@ -52,7 +58,7 @@ nav a {
 
 a {
   text-decoration: none;
-  color:rgb(107, 52, 16)
+  color:rgb(107, 52, 16);
 }
 
 a:hover {
@@ -148,28 +154,26 @@ td, th {
   font-family: 'Charm', cursive;
 }
 
-/* .homepage-image {
-  display: flex;
-  flex-direction: column;
-} */
-
 .keeper-image {
   width: 300px;
 }
 
 .new-beast {
   font-family: 'Charm', cursive;
+  font-size: 24px;
+  margin-left: 50px;
 }
 
 .beast-content {
   color: rgb(107, 52, 16);
   list-style-type: none;
   font-family: 'Charm', cursive;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.keeper-hold {
-/* font-weight: bold; */
-}
+/* .keeper-hold {
+} */
 
 
 
