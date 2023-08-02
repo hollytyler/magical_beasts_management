@@ -2,11 +2,11 @@
 
 {% block content %}
 
-  <h1>{{ keeper.name }}'s {{ keeper.name_of_hold }}</h1>
-  
-  <h1>Beasts</h1>
-  
-  <form action="/keepers/{{ keeper.id }}/add" method="POST">
+  <div class="keeper-showtitle">
+    <h1>{{ keeper.name }}'s {{ keeper.name_of_hold }}</h1>
+  </div>
+
+  <form class="select-beast" action="/keepers/{{ keeper.id }}/add" method="POST">
     <input type="submit" value="add"/>
     <label for="beast">Select a Beast:</label>
       <select name="beast" id="beast">

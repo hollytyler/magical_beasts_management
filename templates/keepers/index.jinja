@@ -1,12 +1,15 @@
 {% extends 'base.jinja' %}
 
 {% block content %}
-  <h1>Our Keepers</h1>
-  <img class="home-image" src="/static/images/keeper_with_beasts.jpg">
+  
+  <h1 class="keeper-title">Our Keepers</h1>
+  <div class="keepers">
+  <img class="keeper-image" src="/static/images/keeper_with_beasts.jpg">
   <table class="table">
     <tr class="headers"> </tr>
     {% for keeper in keeper %}
       <td><a href="keepers/{{ keeper.id }}"> {{ keeper.name }}</a></td>
     {% endfor %}
   </table>
+  </div>
 {% endblock content %}

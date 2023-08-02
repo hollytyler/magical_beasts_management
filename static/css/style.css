@@ -5,25 +5,17 @@ body {
   color: rgb(107, 52, 16);
 }
 
+h1 {
+  font-size: 36px;
+  font-family: 'Apple Chancery', cursive;
+}
+
   .nav-items {
     padding: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     justify-content: space-evenly;
-  }
-
-  h1 {
-    font-size: 36px;
-    font-family: 'Apple Chancery', cursive;
-  }
-
-  h2 {
-    display: flex;
-    align-self: center;
-    align-items: flex-start;
-    font-size: 36px;
-    font-family: 'Apple Chancery', cursive;
   }
 
   nav {
@@ -47,20 +39,78 @@ body {
     text-decoration: none;
     color:rgb(107, 52, 16);
 }
-
-  #content {
-    margin: 0;
-    padding: 20px;
-    list-style-type: none;
+  .keeper-title {
     display: flex;
     justify-content: center;
-}
-
-  .home-image {
+  }
+  
+  .keepers {
     display: flex;
-    
+    justify-content: center;
+    color:rgb(107, 52, 16);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
+  .keepers a {
+    color:rgb(107, 52, 16)
+  }
+
+  .keeper-showtitle {
+    display: flex;
+    justify-content: center;
+  }
+
+  .select-beast {
+    color: rgb(107, 52, 16);
+    font-family: 'Apple Chancery', cursive;
+  }
+
+  .beast-show {
+    color: rgb(107, 52, 16);
+    font-family: 'Apple Chancery', cursive;
+  }
+
+  .delete-button {
+    background-color: transparent;
+    color: rgb(107, 52, 16);
+    border-color: transparent;
+    font-family: 'Apple Chancery', cursive;
+  }
+
+  .add-button {
+    background-color: transparent;
+    color: rgb(107, 52, 16);
+    border-color: transparent;
+    font-family: 'Apple Chancery', cursive;
+  }
+
+  .homepage-title1 {
+    font-size: 36px;
+    font-family: 'Apple Chancery', cursive;
+  }
+
+  .homepage-title2 {
+    display: flex;
+    align-self: center;
+    align-items: flex-start;
+    font-size: 36px;
+    font-family: 'Apple Chancery', cursive;
+  }
+
+.homepage-image {
+  display: flex;
+  align-items: flex-end;
+}
+
+.keeper-image {
+  width: 300px;
+}
+
+.new-beast {
+  font-family: 'Apple Chancery', cursive;
+}
 .beast-content {
   color: rgb(107, 52, 16);
   list-style-type: none;
