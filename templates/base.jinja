@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Magical Beasts and Where We Mend Them</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/tables.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charm&family=Edu+SA+Beginner:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -13,20 +15,20 @@
     <nav>
       <ul class="nav-items">
         <li>
-        <a href="/">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-        <a href="/keepers">Keepers</a> 
+          <a href="/keepers">Keepers</a> 
         </li>
         <li>
-        <a href="/beasts">Magical Beasts</a>
+          <a href="/beasts">Magical Beasts</a>
         </li>
         <li>
-        <a href="/beasts/new">Add Beast</a>
+          <a href="/beasts/new">Add Beast</a>
         </li>
       </ul>
     </nav>
-    </header>
+  </header>
 
     <section>
       {% block content %}

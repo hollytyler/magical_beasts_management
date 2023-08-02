@@ -1,11 +1,12 @@
 {% extends 'base.jinja' %}
 
 {% block content %}
-  <div class="beast-content">
-  <h1>Our Beasts and Where They Reside</h1>
-{% for beast in beasts %}
-  <a href="beasts/{{ beast.id }}"><h1>{{ beast.name }}</h1></a>
-  <h2>Keeper: {{ beast.keeper.name }} Hold: {{ beast.keeper.name_of_hold }}</h2>
+<section class="beast-content">
+  <div>
+    <h1 class="beast-title">Our Beasts and Where They Reside</h1>
+        {% for beast in beasts %}
+      <a href="beasts/{{ beast.id }}"><h1>{{ beast.name }}</h1></a>
+    <h2 class="keeper-hold">Keeper:</h2> <p>{{ beast.keeper.name }}</p> <h2>Hold:</h2> <p>{{ beast.keeper.name_of_hold }}</p>
   </div>
 
   <div class="delete-beast">
@@ -13,12 +14,11 @@
     class="delete-form"
     action="beasts/{{ beast.id }}/delete"
     method="POST">
-    
-      <input class="delete-button" type="submit" value="delete" />
+      <input class="button" type="submit" value="delete" />
     </form>
   </div>
   <hr>
-{% endfor %}
-
+        {% endfor %}
+</section>
 
 {% endblock content %}

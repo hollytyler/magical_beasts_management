@@ -1,126 +1,180 @@
 body {
   margin: 0;
   padding: 20px;
-  background-color: rgb(221, 198, 106);
+  background-color: rgb(219, 186, 77);
   color: rgb(107, 52, 16);
 }
 
 h1 {
+  color: rgb(107, 52, 16);
   font-size: 36px;
-  font-family: 'Apple Chancery', cursive;
+  font-family: 'Charm', cursive;
 }
 
-  .nav-items {
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
-  }
+h2 {
+  margin-bottom: 4px; 
+}
 
-  nav {
+p {
+  margin-top: 0;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-items {
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+nav {
   margin: 4px;
-  background-color: rgb(56, 137, 146);
+  background-color: rgb(55, 161, 158);
   color:rgb(107, 52, 16);
-  font-family: 'Apple Chancery', cursive;
-  font-style: bold;
-  font-size: 16px;
+  font-family: 'Charm', cursive;
   border-style: groove;
   border-width: 4px;
   border-color: rgb(107, 52, 16);
 }
 
-  nav a {
-    /* display: flex;
-    justify-content: space-around;
-    flex-direction: row; */
-    font-size: larger;
-    font-weight: bolder;
-    text-decoration: none;
-    color:rgb(107, 52, 16);
+nav a {
+  font-size: 20px;
+  font-weight: bolder;
+  color:rgb(107, 52, 16);
 }
-  .keeper-title {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .keepers {
-    display: flex;
-    justify-content: center;
-    color:rgb(107, 52, 16);
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
 
-  .keepers a {
-    color:rgb(107, 52, 16)
-  }
+a {
+  text-decoration: none;
+  color:rgb(107, 52, 16)
+}
 
-  .keeper-showtitle {
-    display: flex;
-    justify-content: center;
-  }
+a:hover {
+  text-decoration: underline;
+}
 
-  .select-beast {
-    color: rgb(107, 52, 16);
-    font-family: 'Apple Chancery', cursive;
-  }
-
-  .beast-show {
-    color: rgb(107, 52, 16);
-    font-family: 'Apple Chancery', cursive;
-  }
-
-  .delete-button {
-    background-color: transparent;
-    color: rgb(107, 52, 16);
-    border-color: transparent;
-    font-family: 'Apple Chancery', cursive;
-  }
-
-  .add-button {
-    background-color: transparent;
-    color: rgb(107, 52, 16);
-    border-color: transparent;
-    font-family: 'Apple Chancery', cursive;
-  }
-
-  .homepage-title1 {
-    font-size: 36px;
-    font-family: 'Apple Chancery', cursive;
-  }
-
-  .homepage-title2 {
-    display: flex;
-    align-self: center;
-    align-items: flex-start;
-    font-size: 36px;
-    font-family: 'Apple Chancery', cursive;
-  }
-
-.homepage-image {
+td, th {
   display: flex;
-  align-items: flex-end;
+  align-items: start;
+  justify-content: space-around;
+  font-size: 24px;
+  font-family: 'Charm', cursive;
 }
+
+.keeper-title {
+  display: flex;
+  justify-content: center;
+}
+
+.keepers {
+  display: flex;
+  justify-content: center;
+  color:rgb(107, 52, 16);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.keepers a {
+  color:rgb(107, 52, 16)
+}
+
+.keeper-showtitle {
+  display: flex;
+  justify-content: center;
+}
+
+.keeper-beast {
+  font-size: 20px;
+  list-style-type: none;
+  font-family: 'Charm', cursive;
+}
+
+.add-individual {
+  background-color: transparent;
+  font-size: 16px;
+  color: rgb(107, 52, 16);
+  border-color: transparent;
+  font-family: 'Charm', cursive;
+}
+
+.select-beast {
+  color: rgb(107, 52, 16);
+  font-family: 'Charm', cursive;
+  font-size: 18px;
+}
+
+.select-beast ul {
+  font-size: 20px;
+}
+
+.beast-show {
+  color: rgb(107, 52, 16);
+  font-family: 'Charm', cursive;
+}
+
+.button {
+  font-size: 18px;
+  background-color: transparent;
+  color: rgb(107, 52, 16);
+  border-color: transparent;
+  font-family: 'Charm', cursive;
+}
+
+.button:hover {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.homepage-title1 {
+  font-size: 36px;
+  font-family: 'Charm', cursive;
+  margin-bottom: 0px;
+}
+
+.homepage-title2 {
+  color:rgb(107, 52, 16);
+  margin-top: 4px;
+  display: flex;
+  align-self: center;
+  align-items: flex-start;
+  font-size: 36px;
+  font-family: 'Charm', cursive;
+}
+
+/* .homepage-image {
+  display: flex;
+  flex-direction: column;
+} */
 
 .keeper-image {
   width: 300px;
 }
 
 .new-beast {
-  font-family: 'Apple Chancery', cursive;
+  font-family: 'Charm', cursive;
 }
+
 .beast-content {
   color: rgb(107, 52, 16);
   list-style-type: none;
+  font-family: 'Charm', cursive;
 }
-    
-    ul {
-      list-style-type: none;
-      font-family: cursive;
-    }
 
-  /* h1, h2, h3, h4, h5 {
+.keeper-hold {
+/* font-weight: bold; */
+}
 
-  } */
+
+
+.beast-title {
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+}

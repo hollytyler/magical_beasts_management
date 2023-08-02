@@ -3,11 +3,11 @@
   {% block content %}
   <div class="beast-show">
     <h1>{{ beast.name }}</h1>
-    <h2>Date of Birth: {{ beast.dob }}</h2>
-    <h2>Species: {{ beast.species }}</h2>
-    <h2>Current assigned Keeper is {{ beast.keeper.name }}</h2>
-    <h2>Little {{ beast.name }} is currently being treated for: {{ beast.ailment }}</h2>
-    <h2>Their treatment plan is currently: {{ beast.treatment }}</h2>
+    <h2>Date of Birth: </h2><p>{{ beast.dob }}</p>
+    <h2>Species: </h2><p>{{ beast.species }}</p>
+    <h2>Current assigned Keeper is <span>{{ beast.keeper.name }}</span></h2>
+    <h2>Little <span>{{ beast.name }}</span> is currently being treated for: <span>{{ beast.ailment }}</span></h2>
+    <h2>Their treatment plan is currently: <span>{{ beast.treatment }}</span></h2>
     <a href="/beasts/{{ beast.id }}/edit">Edit</a>
   </div>
   {% endblock content %}
