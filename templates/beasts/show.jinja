@@ -8,6 +8,6 @@
     <h2>Current assigned Keeper is <span>{{ beast.keeper.name }}</span></h2>
     <h2>Little <span>{{ beast.name }}</span> is currently being treated for: <span>{{ beast.ailment }}</span></h2>
     <h2>Their treatment plan is currently: <span>{{ beast.treatment }}</span></h2>
-    <a href="/beasts/{{ beast.id }}/edit">Edit</a>
+    <a class="edit-button" href="/beasts/{{ beast.id }}/edit">Edit Beast</a>
   </div>
   {% endblock content %}

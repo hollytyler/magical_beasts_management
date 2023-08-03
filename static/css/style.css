@@ -25,6 +25,13 @@ span {
   font-size: 30px;
 }
 
+.span2 {
+  font-size: 40px;
+  margin-top: 0px;
+  margin-right: 8px;
+  margin-left: 8px;
+  font-family: cursive;
+}
 .home {
   display: flex;
   align-items: center;
@@ -79,12 +86,17 @@ td, th {
 }
 
 .keepers {
+  background-color: rgb(214, 187, 99);
   display: flex;
   justify-content: center;
   color:rgb(107, 52, 16);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .keepers a {
@@ -123,8 +135,14 @@ td, th {
 .beast-show {
   color: rgb(107, 52, 16);
   font-family: 'Charm', cursive;
+  margin: 30px;
 }
 
+.edit-button {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
 .button {
   font-size: 18px;
   background-color: transparent;
@@ -152,6 +170,7 @@ td, th {
   align-items: flex-start;
   font-size: 36px;
   font-family: 'Charm', cursive;
+  margin-bottom: 6px;
 }
 
 .keeper-image {
