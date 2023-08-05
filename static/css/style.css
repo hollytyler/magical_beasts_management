@@ -143,6 +143,7 @@ td, th {
   font-size: 20px;
   font-weight: 700;
 }
+
 .button {
   font-size: 18px;
   background-color: transparent;
@@ -190,11 +191,6 @@ td, th {
   margin-left: 50px;
   margin-right: 50px;
 }
-
-/* .keeper-hold {
-} */
-
-
 
 .beast-title {
   font-size: 40px;
